@@ -8,14 +8,14 @@ import logging
 import docker
 
 TEMPLATE = r"""
-FROM buildpack-deps:bionic
+FROM nvidia/cuda:9.0-runtime-ubuntu16.04
 
 # avoid prompts from apt
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Set up locales properly
 RUN apt-get update && \
-    apt-get install --yes --no-install-recommends locales && \
+    apt-get install --yes --no-install-recommends locales wget bzip2 && \
     apt-get purge && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
