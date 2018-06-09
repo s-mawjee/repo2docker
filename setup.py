@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='jupyter-repo2docker',
+    name='crowdai-repo2docker',
     version='0.5.0',
     install_requires=[
         'docker',
@@ -19,8 +19,7 @@ setup(
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'jupyter-repo2docker = repo2docker.__main__:main',
-            'repo2docker = repo2docker.__main__:main',
+            'crowdai-repo2docker = repo2docker.__main__:main',
         ]
     },
 )
