@@ -117,6 +117,8 @@ RUN ./{{ s }}
 {% endfor %}
 {% endif -%}
 
+ENV MALMO_XSD_PATH /srv/conda/Schemas
+
 # Specify the default command to run
 CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
 
